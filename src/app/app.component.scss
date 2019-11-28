@@ -1,0 +1,60 @@
+.movies-page {
+  &.dark-background {
+    opacity: 0.5;
+  }
+
+  .master-background {
+    display: inline-block;
+    margin-bottom: 1rem;
+    height: 2rem;
+    font-size: 20px;
+    text-indent: 20px;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    line-height: 1.5;
+
+    ::ng-deep {
+      .ui-colorpicker {
+        display: inline-block;
+
+        .ui-colorpicker-preview {
+          width: 2rem;
+        }
+
+        .ui-colorpicker-panel {
+          position: relative;
+          width: 193px;
+          height: 166px;
+          background-color: #323232;
+          border-color: #191919;
+
+          &.ui-colorpicker-overlay-panel {
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+
+  .add-button {
+    font-size: 1.2rem;
+    color: #00a0dc;
+    background-color: #f9f9f9;
+    border: 0.1rem solid #e6e6e6;
+    height: 3rem;
+    line-height: 0;
+    border-radius: 0.5rem;
+    cursor: default;
+    white-space: nowrap;
+    padding: 1rem;
+  }
+
+  .movies-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

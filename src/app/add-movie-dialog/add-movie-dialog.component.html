@@ -1,0 +1,25 @@
+<!-- this is slightly modified default PrimeNG confirm dialog template -->
+
+<div
+  [ngClass]="{'ui-dialog ui-confirmdialog ui-widget ui-widget-content ui-corner-all ui-shadow':true,'ui-dialog-rtl':rtl}"
+  (mousedown)="moveOnTop()" [@animation]="'visible'"
+  (@animation.start)="onAnimationStart($event)" class="modal-window">
+  <div *ngIf="header" class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top">
+    <span class="ui-dialog-title">{{header}}</span>
+    <i class="close-modal" (click)="onClose()"></i>
+  </div>
+  <div class="ui-dialog-content ui-widget-content ui-g">
+    <div class="ui-md-9 ui-g-9 modal-content">
+      <form (ngSubmit)="onSubmit(addMovieForm)" [formGroup]="addMovieForm" class="add-movie-form" novalidate>
+        <input class="add-movie-input" formControlName="movieName" maxlength="80"
+          placeholder="Movie name" type="text" #firstInput />
+        <input class="add-movie-input" formControlName="movieLink" placeholder="Movie link"
+          type="text" />
+        <button #submitButton class="add-movie-submit" type="submit" [disabled]="addMovieForm.invalid">Add</button>
+      </form>
+    </div>
+  </div>
+  <div class="ui-dialog-footer ui-widget-content" *ngIf="footer">
+    <ng-content select="p-footer"></ng-content>
+  </div>
+</div>

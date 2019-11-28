@@ -1,0 +1,121 @@
+// this file overwrites default PrimeNG confirm dialog styles
+body .ui-widget-overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body .ui-dialog.ui-confirmdialog {
+  padding: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.2);
+  transform: none;
+  top: 20%;
+  position: absolute;
+  left: 30%;
+  width: 50%;
+  background-color: #fff;
+
+  .ui-dialog-titlebar {
+    padding-top: 1em;
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+
+    .close-modal {
+      display: block;
+      color: #000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      cursor: pointer;
+
+      &::before {
+        content: "\00d7";
+      }
+    }
+  }
+
+  .ui-dialog-content {
+    min-width: 16rem;
+    background-color: #fff;
+    color: #ccc;
+    padding: 15px;
+    min-height: 160px;
+
+    .modal-content {
+      padding: 0 2rem;
+
+      .add-movie-form {
+        .add-movie-input {
+          display: block;
+          margin-bottom: 1rem;
+          width: 100%;
+          height: 2rem;
+          font-size: 20px;
+          text-indent: 20px;
+
+          &::placeholder {
+            font-size: 20px;
+            color: #b3b3b3;
+            font-weight: 600;
+          }
+        }
+
+        .add-movie-submit {
+          font-size: 1.2rem;
+          color: #00a0dc;
+          background-color: #f9f9f9;
+          border: 0.1rem solid #e6e6e6;
+          height: 3rem;
+          line-height: 0;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          border-radius: 0.5rem;
+          cursor: default;
+          white-space: nowrap;
+          padding: 1rem;
+          float: right;
+
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+
+  .ui-dialog-footer {
+    height: 40px;
+    background-color: #bfc0c1;
+    padding: 0.5rem;
+    border-top: 0.1rem solid #8c9093;
+    top: 0;
+
+    button {
+      font-size: 13px;
+      color: #00a0dc;
+      background-color: #f9f9f9;
+      border: 0.1rem solid #e6e6e6;
+      height: 3rem;
+      line-height: 0;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      border-radius: 0.5rem;
+      cursor: default;
+      white-space: nowrap;
+      padding-top: 1.5px;
+
+      span {
+        font-family: "Quicksand Bold", sans-serif;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background-color: #efefef;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="movie-item" #movie>
+  <i class="delete-icon" (click)="onItemRemove(movieItem.id)"></i>
+  <div>Choose Background
+      <input type="color" #colorPicker (input)="setColor(colorPicker)">
+  </div>
+  <div><span class="title">Movie name: </span>{{movieItem?.movieName}}</div>
+  <div><span class="title">Movie link: </span>{{movieItem?.movieLink}}</div>
+</div>
